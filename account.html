@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slide Navbar</title>
+    <link rel="stylesheet" type="text/css" href="account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">FRAYGMANCE</a>
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="home.html">Home</a></li>
+                    <li><a href="collection.html">Men</a></li>
+                    <li><a href="collection2.html">Women</a></li>
+                    <li><a href="Niche.html">Niche</a></li>
+                    <li><a href="account.html">Account</a></li>
+        </div>
+    </nav>
+</header>
+<body>
+<div class="main">     
+    <input type="checkbox" id="chk" aria-hidden="true">
+    <div class="signup">
+        <form action="Home.html" onsubmit="return SignUp()">
+            <label for="chk" aria-hidden="true">Sign up</label>
+            <input id="username" type="text" name="txt" placeholder="Nom d'utilisateur" required="">
+            <input id="email" type="email" name="email" placeholder="Email" required="">
+            <input id="phone" type="number" name="Tél" placeholder="Téléphone" required="Téléphone">
+            <input id="password" type="password" name="pswd" placeholder="Mot de passe" required="">
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+
+    <div class="login">
+        <form action="Home.html" onsubmit="return SignIn()">
+            <label for="chk" aria-hidden="true">Login</label>
+            <input id="loginEmail" type="email" name="email" placeholder="Email" required="">
+            <input id="loginPassword" type="password" name="pswd" placeholder="Mot de passe" required="">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+<script>
+    var users = [
+        { email: "aymanzroudi@gmail.com", password: "azerty", phone: "066666666", fname: "ayman", lname: "zroudi" },
+        { email: "nizarzroudi@gmail.com", password: "qwerty", phone: "0677777777", fname: "nizar", lname: "zroudi" }
+    ];
+
+    function SignIn() {
+        var email = document.getElementById("loginEmail").value;
+        var password = document.getElementById("loginPassword").value;
+        for (var i = 0; i < users.length; i++) {
+            if (email === users[i].email && password === users[i].password) {
+                alert("Welcome " + users[i].fname);
+                return true;
+            }
+        }
+        alert("Email or password incorrect !!!");
+        return false;
+    }
+
+    function SignUp() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var username = document.getElementById("username").value;
+        var phone = document.getElementById("phone").value;
+        for (var i = 0; i < users.length; i++) {
+            if (email === users[i].email) {
+                alert("Email already used, try another one.");
+                return false;
+            }
+        }
+        users.push({ email: email, password: password, phone: phone, fname: username });
+        alert("Welcome!");
+        return true;
+    }
+</script>
+</body>
+<footer>
+    <div class="footer-content">
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="linkedin-icon.png" alt="LinkedIn">
+            </a>
+        </div>
+        <p>&copy; 2024 FRAYGMANCE. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="contact.html" >Contactez-nous</a>
+        </div>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    padding-top: 50px;
+    background-color: #f5f5f5; /* Light grey background for better contrast */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(100, 159, 182);
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.navbar a {
+    color: rgb(241, 239, 239);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+.navbar .nav-links ul li a:hover {
+    color:rgb(50, 99, 119); /* Darker color for hover effect */
+}
+
+.hero {
+    background: url('jpgheade.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 80px; /* Adjust for fixed navbar */
+}
+.hero-content p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Change the font family here */
+    font-style: italic;
+    font-style: bold;
+}
+.niche .hero {
+    background: url('niche.png') no-repeat center center/cover;
+    height: 50vh;
+    margin-top:25px;
+    
+}
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 5px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.btn {
+    display: inline-block;
+    background-color: rgb(100, 159, 182);
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.hero-content {
+    text-align: center; /* Center align the content */
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .btn {
+    margin-bottom: 20px; /* Add spacing between the elements */
+}
+
+
+.btn:hover {
+    background-color: #5e8b99; /* Darker shade of the navbar color on hover */
+}
+
+
+.collection-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.collection {
+    width: 90%;
+    margin: 20px 0;
+}
+
+.collection h2 {
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.collection h2 a {
+    color: rgb(100, 159, 182); /* Color for the arrow and link */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.collection h2 a::before {
+    
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.collection-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    height: 290px;
+    width: 150px;
+}
+
+.gallery-item figure {
+    margin: 0;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 10px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.price {
+    font-weight: bold;
+    color: rgb(100, 159, 182);
+    margin-top: 5px;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: rgb(100, 159, 182);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media {
+    margin-bottom: 15px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-content p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top:  5px;
+}
+
+.footer-links a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #000;
+}
+    .summer-winter-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 50px; /* Adjust as needed */
+    }
+    
+    .summer-fragrances,
+    .winter-fragrances {
+        width: 100%; /* Adjust as needed */
+    }
+    
+    .summer-fragrances .fragrance-gallery,
+    .winter-fragrances .fragrance-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+
+    .summer-fragrances .fragrance-gallery .gallery-item,
+    .winter-fragrances .fragrance-gallery .gallery-item {
+        width: calc(50% - 10px); /* Adjust gap width */
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        height: 290px;
+    width: 150px;
+    }
+    
+    .summer-fragrances .fragrance-gallery .gallery-item figure,
+    .winter-fragrances .fragrance-gallery .gallery-item figure {
+        margin: 0;
+        position: relative;
+    }
+    
+    .summer-fragrances .fragrance-gallery .gallery-item img,
+    .winter-fragrances .fragrance-gallery .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .summer-fragrances .fragrance-gallery .gallery-item figcaption,
+    .winter-fragrances .fragrance-gallery .gallery-item figcaption {
+        padding: 10px;
+        font-size: 1em;
+        text-align: center;
+    }
+    
+    .summer-fragrances .fragrance-gallery .gallery-item .price,
+    .winter-fragrances .fragrance-gallery .gallery-item .price {
+        font-weight: bold;
+        color: rgb(100, 159, 182);
+        margin-top: 5px;
+    }
+    
+    .summer-fragrances .fragrance-gallery .gallery-item:hover,
+    .winter-fragrances .fragrance-gallery .gallery-item:hover {
+        transform: translateY(-5px);
+    }
+    .imagesummer {
+        width:900px; /* Adjust the width */
+        height: auto; /* Maintain aspect ratio */
+        border: 2px solid #ccc; /* Add a border */
+        border-radius: 5px; /* Add border radius */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    }
+    .imagewinter {
+        width: 900px; /* Adjust the width */
+        height: auto; /* Maintain aspect ratio */
+        border: 2px solid #ccc; /* Add a border */
+        border-radius: 5px; /* Add border radius */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    }
